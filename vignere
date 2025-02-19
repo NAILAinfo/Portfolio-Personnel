@@ -3,71 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 50px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        input {
-            margin: 10px 0;
-            padding: 8px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            width: 100%;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        #result {
-            margin-top: 15px;
-            font-weight: bold;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Ma Page Web</title>
+
 </head>
 <body>
-    <div class="container">
-        <h2>Entrer le texte claire :</h2>
-        <input type="text" id="info1" placeholder="... ">
-        <h2>Entrer la clé  :</h2>
-        <input type="text" id="info2" placeholder="...">
-        <button onclick="afficherInfos()">Chiffrer </button>
-        <p id="result"></p>
+    <nav> 
+    <ul>
+        <li class="link"><a href="">Home</a></li>
+        <li class="link"><a href="">About</a></li>
+        <li class="link"><a href="">Projects</a></li>
+        <li class="link"><a href="">Blog</a></li>
+        <li class="link"><a href="">Contact</a></li>
+    </ul>
+    <button>Download cv</button>
+</nav>
+<div>
+    <h1>About</h1>
+    <p>Hello, I'm</p>
+    <p>Naila Dahmani </p>
+    <p>Développeuse Front end innovante et proactive, capable de développer des sites web et des applications aux concepts élégants et novateurs pour des clients exigeants. Talentueuse dans la gestion de projet, le leadership d'équipe et la résolution indépendante de problèmes. Polyvalente et hautement organisée avec une expertise dans la planification de projets, l'amélioration des concepts et la vérification de la programmation.</p>
+</div>
+    <div>
+        <h1>Skills</h1>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>php</li>
+            <li>SQL</li>
+            <li>React</li>  
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>Git</li>
+        </ul>
     </div>
-
-    <script>
-        function afficherInfos() {
-            let info1 = document.getElementById("info1").value;
-            let info2 = document.getElementById("info2").value;
-            
-            if (info1 && info2) {
-                document.getElementById("result").innerText = "le texte chiffree : " + info1 ;
-            } else {
-                document.getElementById("result").innerText = "Veuillez remplir les deux champs.";
-            }
-        }
-    
-    </script>
+    <div>
+        <h1>Projets remarquables</h1>
+        <ul>
+            <li>Gestion d'un Hôtel</li>
+            <li>Sudoku game</li>
+            <li>Jeu du Pendu</li>
+    </div>
+    <br>
+    <div>
+        <a href="">Github</a>
+        <a href="">Linkedin</a>
+        <a href="">Discord</a>
+        <a href="">gmail</a>
+    </div>
 </body>
 </html>
