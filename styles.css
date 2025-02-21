@@ -1,0 +1,73 @@
+body{
+    background-color: #08032e;
+    margin: 0;
+    padding: 0;
+}
+h1{
+   font-family:  arsenica; 
+   color: #715369; 
+}
+ul {
+    list-style-type: none; 
+    padding: 20px; 
+    color: white;
+}
+p{
+    color: white;
+}
+ul li {
+    display: inline;
+    margin-right: 40px; /* Ajoute un espace entre les éléments */
+}
+ul li a {
+    text-decoration: none; 
+    color: wheat;
+}
+/*---------------------------------------*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 15px 10px;
+    background: linear-gradient(135deg, #325aa6, #08032e);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Couleur de fond optionnelle */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header ul{
+    margin: 0 auto;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 5px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+header ul li{
+padding-left: 80px;
+padding-left:40px ;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #3e3771;
+    color: aliceblue;
+
+}
+
+/*---------------------------------------*/
+nav{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+  
+}
+/*---------------------------------------*/
+.description{
+    padding: 10px;
+    margin:10px;
+    border-radius: 10px;
+    width: 55%;
+}
