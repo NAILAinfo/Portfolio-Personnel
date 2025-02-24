@@ -1,8 +1,129 @@
-body{
-    background-color: #08032e;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+:root{
+    --text-color: #08032e;
+    --link-color: #2c4e30;
+    --background-color: #f5f5f5;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+}
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+/*---------------------------------------*/
+
+/*---------------------------------------*/
+#skills img{
+    flex-wrap: wrap;
+    width: 10%;
+    gap: 20px;
+    padding: 20px;
+}
+/*---------------------------------------*/
+#projet{
+    width: 250px;
+    height:250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 20px;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    font-size: 25px;
+   
+}
+.hotel{
+    background-image: url("hotel.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   color: white;
+}
+.sudoku{
+    background-image: url("sudoku.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   color: #08032e;
+}
+/*---------------------------------------*/
+.inputs {
+    width: 300px;
+    height: 200px;
+    display: grid;
+    place-items: center; /* Centre horizontalement et verticalement */
+}
+textarea {
+    width: 300px;
+    height: 150px;
+}
+
+/*---------------------------------------*/
+hr {
+    border: 0.5px solid rgb(114, 110, 110);
+}
+/*---------------------------------------*/
+#links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+align-items: center;
+padding: 25px 5px 25px 5px;
+}
+
+/*---------------------------------------*/
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    gap: 10px;
+}
+i {
+    font-size: 24px;
+}
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1em 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #325aa6, #08032e);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s easer-in-out ;
+
+}
+/*---------------------------------------*/
 h1{
    font-family:  arsenica; 
    color: #715369; 
@@ -10,10 +131,10 @@ h1{
 ul {
     list-style-type: none; 
     padding: 20px; 
-    color: white;
+    color: rgb(86, 15, 15);
 }
 p{
-    color: white;
+    color: rgb(54, 6, 6);
 }
 ul li {
     display: inline;
@@ -21,39 +142,12 @@ ul li {
 }
 ul li a {
     text-decoration: none; 
-    color: wheat;
+    color: rgb(50, 35, 6);
 }
 /*---------------------------------------*/
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    padding: 15px 10px;
-    background: linear-gradient(135deg, #325aa6, #08032e);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Couleur de fond optionnelle */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-header ul{
-    margin: 0 auto;
-    color: white;
-    padding: 10px 40px;
-    border-radius: 5px;
-}
 footer a {
-    color: white;
+    color: rgb(77, 19, 19);
     text-decoration: none;
-}
-header ul li{
-padding-left: 80px;
-padding-left:40px ;
-}
-button{
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #3e3771;
-    color: aliceblue;
-
 }
 
 /*---------------------------------------*/
@@ -61,7 +155,7 @@ nav{
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: aliceblue;
+    color: rgb(3, 14, 23);
   
 }
 /*---------------------------------------*/
@@ -71,3 +165,23 @@ nav{
     border-radius: 10px;
     width: 55%;
 }
+
+
+
+.cercle {
+    width: 150px;  /* Ajuste la taille */
+    height: 150px; /* Assure un cercle parfait */
+    border-radius: 50%;
+    object-fit: cover; /* Coupe l'image pour remplir le cercle */
+    }
+  
+
+
+/*---------------------------------------*/
+@media(max-width:600px) {
+    nav{
+        padding: 0 20px;
+    };
+    
+}
+/*---------------------------------------*/    
