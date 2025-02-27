@@ -12,32 +12,29 @@
 <body>
 <nav>
     <div class="left">
-    <p>about</p>
-    <p>Skills</p>
-    <p>Projects</p>
-    <p>Contact</p>
-    <p>Links</p>
+    <p><a href="#about">about</a></p>
+    <p><a href="#skills">Skills</a></p>
+    <p><a href="#projects">Projects</a></p>
+    <p><a href="#contact">Contact</a></p>
+    <p><a href="#links">Links</a></p>
     </div>
     <div class="right">
-    <button>Download CV</button></div>
+    <button style="background-color: #5bb450">Download CV</button></div>
 </nav>
-
 <section id="first">
     <img src="https://i.pinimg.com/736x/58/a8/6b/58a86ba42e73f1410457f127d72bf5aa.jpg" alt="" class="cercle">
     <h1>Hi , I'm Naila </h1>
-    <h2>Front end Developer based in Algeria </h2>  
+    <h2>Front end Developer  </h2>  
 </section>
-
-<h1>About</h1>
 <section id="about">
-    <div class="description">
+    <h1>About</h1>
+    <div class="description" style="padding:25px ;">    
         <p>Hello, I'm</p>
         <p>Naila Dahmani </p>
         <p>Innovative and proactive Front-end Developer, capable of developing websites and applications with elegant and innovative concepts for demanding clients. Talented in project management, team leadership and independent problem solving. Versatile and highly organized with expertise in project planning, concept improvement and programming verification.</p>
     </div> 
 </section>
 <section id="blogs">
-
 </section>
 <section id="skills">
     <h1>Skills</h1>
@@ -60,7 +57,7 @@
 </section>
 <section id="contact"> 
     <h1>Contact</h1>
-    <form>
+    <form id="emailForm">
         <div class="inputs">
         <label for="name">Name</label>
         <input type="text" id="name" >
@@ -71,7 +68,7 @@
         <label for="message">Message</label>
         <textarea id="message" cols="30" rows="10"></textarea>
         
-        <button type="submit">Send</button>
+        <button type="submit" style="background-color: #0747a1; color: aliceblue;">Send</button>
     </div>
     </form>
 </section>
@@ -90,5 +87,34 @@
         <span>Email</span>
     </a>
 </section>
+
+
+<!-- Script EmailJS (chargé en premier) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    // Initialisation d'EmailJS avec la clé publique
+    emailjs.init("tsC8WsEI5AwREWRAA"); // Remplace par ta clé publique EmailJS
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.send("service_zm6qgaa", "template_dnqslgi", {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            })
+            .then(function(response) {
+                alert("✅ Email envoyé avec succès !");
+                document.getElementById("emailForm").reset();
+            })
+            .catch(function(error) {
+                alert("❌ Erreur lors de l'envoi : " + JSON.stringify(error));
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
